@@ -1,0 +1,267 @@
+<!DOCTYPE html><html lang="en"><head>    <meta charset="UTF-8">    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnapCulture Visuals | Photography & Films</title>
+    <meta name="description" content="SnapCulture Visuals captures beautiful portraits, events and unforgettable moments.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"></head>
+<body>
+<header class="navbar">    <a href="#" class="logo">        <span class="logo-mark">SC</span>        <span>SNAPCULTURE <small>VISUALS</small></span>    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+    <nav id="navMenu">        <a href="#home">Home</a>        <a href="#about">About</a>        <a href="#portfolio">Portfolio</a>        <a href="#services">Services</a>        <a href="#contact">Contact</a>    </nav>
+    <a href="https://wa.me/2348101311992" class="nav-book" target="_blank">        Book a Session ↗    </a></header>
+
+<main>
+<section class="hero" id="home">    <div class="hero-overlay"></div>
+    <div class="hero-content">        <p class="eyebrow">WELCOME TO SNAPCULTURE VISUALS</p>
+        <h1>Every Picture<br>Has a <em>Story.</em></h1>
+        <p class="hero-description">            We capture emotions, preserve memories and turn            beautiful moments into timeless photographs.        </p>
+        <div class="hero-buttons">            <a href="#portfolio" class="btn btn-gold">Explore Our Work ↗</a>            <a href="#contact" class="btn btn-outline">Let's Connect</a>        </div>
+        <div class="hero-caption">            PHOTOGRAPHY · CREATIVITY · MEMORIES        </div>    </div></section>
+
+<section class="intro section-padding" id="about">    <div class="intro-image">        
+
+<img src="{{ url_for('static', filename='images/portrait.jpg') }}" alt="SnapCulture portrait photography">    </div>
+    <div class="intro-text">        <p class="eyebrow">BEHIND THE LENS</p>
+        <h2>We Don't Just Take Pictures.<br><em>We Capture Feelings.</em></h2>
+        <p>            At SnapCulture Visuals, we believe every moment deserves            to be remembered beautifully. From personal portraits to            unforgettable celebrations, we bring creativity, passion            and attention to every frame.        </p>
+        <a href="#services" class="text-link">Discover Our Services ↗</a>    </div></section>
+
+<section class="portfolio section-padding" id="portfolio">    <div class="section-heading">        <p class="eyebrow">A COLLECTION OF MOMENTS</p>        <h2>Our <em>Portfolio</em></h2>        <p>Stories captured through our lens.</p>    </div>
+    <div class="gallery">        <div class="gallery-item tall"
+     tabindex="0"
+     role="button"
+     aria-label="View portrait photograph">            <img src="{{ url_for('static', filename='images/Portrait (2).png') }}" alt="Portrait photography">
+            <div class="gallery-label">                <span>01 / PORTRAITS</span>                <h3>Timeless Beauty</h3>            </div>        </div>
+        <div class="gallery-item"
+     tabindex="0"
+     role="button"
+     aria-label="View wedding photograph">            <img src="{{ url_for('static', filename='images/Wedding (2).png') }}" alt="Wedding photography">            <div class="gallery-label">                <span>02 / WEDDINGS</span>                <h3>Love & Celebrations</h3>            </div>        </div>
+        <div class="gallery-item"
+     tabindex="0"
+     role="button"
+     aria-label="View studio photograph">            <img src="{{ url_for('static', filename='images/studio.jpg') }}" alt="Studio photography">            <div class="gallery-label">                <span>03 / STUDIO</span>                <h3>Personal Expression</h3>            </div>        </div>
+        <div class="gallery-item">            <img src="{{ url_for('static', filename='images/Event (2).PNG') }}" alt="Event photography">
+            <div class="gallery-label">                <span>04 / EVENTS</span>                <h3>Unforgettable Stories</h3>            </div>        </div>    </div></section>
+
+<!-- PORTFOLIO LIGHTBOX -->
+<div class="lightbox" id="lightbox" hidden
+     role="dialog"
+     aria-modal="true"
+     aria-label="Portfolio image viewer">
+
+    <button class="lightbox-close"
+            id="lightboxClose"
+            aria-label="Close image viewer">
+        &times;
+    </button>
+
+    <button class="lightbox-prev"
+            id="lightboxPrev"
+            aria-label="Previous photograph">
+        &#10094;
+    </button>
+
+    <div class="lightbox-content">
+        <img id="lightboxImage" src="" alt="">
+
+        <div class="lightbox-caption">
+            <span id="lightboxCategory"></span>
+            <h3 id="lightboxTitle"></h3>
+        </div>
+    </div>
+
+    <button class="lightbox-next"
+            id="lightboxNext"
+            aria-label="Next photograph">
+        &#10095;
+    </button>
+
+</div>
+
+
+<section class="services section-padding" id="services">    <div class="section-heading">        <p class="eyebrow">WHAT WE DO</p>        <h2>Our Creative <em>Services</em></h2>        <p>Photography made to celebrate your story.</p>    </div>
+    <div class="service-grid">        <article class="service-card">            <span>01</span>            <h3>Portrait Photography</h3>            <p>Beautiful individual portraits that express your personality and confidence.</p>        </article>
+        <article class="service-card">            <span>02</span>            <h3>Event Photography</h3>            <p>Capturing birthdays, weddings, celebrations and life's special occasions.</p>        </article>
+        <article class="service-card">            <span>03</span>            <h3>Studio Photography</h3>            <p>Creative studio sessions with professional lighting and beautiful details.</p>        </article>    </div></section>
+
+<section class="booking" id="contact">    <p class="eyebrow">LET'S CREATE SOMETHING BEAUTIFUL</p>
+    <h2>Your Moments.<br><em>Our Lens.</em></h2>
+    <p>Have a special moment coming up? Let's make it unforgettable.</p>
+   <a href="https://wa.me/2348101311992?text=Hello%20SnapCulture%20Visuals%2C%20I%20would%20like%20to%20book%20a%20photography%20session." target="_blank" class="btn btn-gold">    Book Your Session on WhatsApp ↗</a> </section>
+</main>
+
+<footer>    <a href="#home" class="logo">        <span class="logo-mark">SC</span>        <span>SNAPCULTURE <small>VISUALS</small></span>    </a>
+    <p>Capturing moments. Creating memories.</p>
+    <div class="footer-links">        <a href="#home">Home</a>        <a href="#portfolio">Portfolio</a>        <a href="#contact">Contact</a>    </div>
+    <p class="copyright">        © <span id="year"></span> SnapCulture Visuals. All rights reserved.    </p></footer>
+
+
+// ===== MOBILE NAVIGATION =====
+
+const menuToggle = document.getElementById("menuToggle");
+const navMenu = document.getElementById("navMenu");
+
+menuToggle.setAttribute("aria-expanded", "false");
+
+menuToggle.addEventListener("click", () => {
+    const isOpen = navMenu.classList.toggle("active");
+
+    menuToggle.setAttribute("aria-expanded", isOpen);
+    menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? "Close menu" : "Open menu"
+    );
+});
+
+document.querySelectorAll("#navMenu a").forEach(link => {
+    link.addEventListener("click", () => {
+        navMenu.classList.remove("active");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open menu");
+    });
+});
+
+// ===== AUTOMATIC COPYRIGHT YEAR =====
+
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+// ===== PORTFOLIO LIGHTBOX =====
+
+const galleryItems = [...document.querySelectorAll(".gallery-item")];
+
+const lightbox = document.getElementById("lightbox");
+const lightboxImage = document.getElementById("lightboxImage");
+const lightboxTitle = document.getElementById("lightboxTitle");
+const lightboxCategory = document.getElementById("lightboxCategory");
+
+const closeBtn = document.getElementById("lightboxClose");
+const prevBtn = document.getElementById("lightboxPrev");
+const nextBtn = document.getElementById("lightboxNext");
+
+let currentImage = 0;
+let previousFocus = null;
+
+function showImage(index) {
+    currentImage =
+        (index + galleryItems.length) % galleryItems.length;
+
+    const item = galleryItems[currentImage];
+    const image = item.querySelector("img");
+
+    const category = item.querySelector(".gallery-label span");
+    const title = item.querySelector(".gallery-label h3");
+
+    lightboxImage.src = image.src;
+    lightboxImage.alt = image.alt;
+
+    lightboxCategory.textContent =
+        category ? category.textContent : "";
+
+    lightboxTitle.textContent =
+        title ? title.textContent : "";
+
+}
+
+function openLightbox(index) {
+    previousFocus = document.activeElement;
+
+    showImage(index);
+
+    lightbox.hidden = false;
+    document.body.style.overflow = "hidden";
+
+    closeBtn.focus();
+}
+
+function closeLightbox() {
+    lightbox.hidden = true;
+    document.body.style.overflow = "";
+
+    lightboxImage.removeAttribute("src");
+
+    if (previousFocus) {
+        previousFocus.focus();
+    }
+}
+
+function nextImage() {
+    showImage(currentImage + 1);
+}
+
+function previousImage() {
+    showImage(currentImage - 1);
+}
+
+// Open photographs
+galleryItems.forEach((item, index) => {
+
+    item.addEventListener("click", () => {
+        openLightbox(index);
+    });
+
+    item.addEventListener("keydown", event => {
+        if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            openLightbox(index);
+        }
+    });
+
+});
+
+// Navigation controls
+closeBtn.addEventListener("click", closeLightbox);
+nextBtn.addEventListener("click", nextImage);
+prevBtn.addEventListener("click", previousImage);
+
+// Close when clicking outside the photograph
+lightbox.addEventListener("click", event => {
+    if (event.target === lightbox) {
+        closeLightbox();
+    }
+});
+
+// Keyboard navigation
+document.addEventListener("keydown", event => {
+
+    if (lightbox.hidden) return;
+
+    if (event.key === "Escape") {
+        closeLightbox();
+    }
+
+    if (event.key === "ArrowRight") {
+        nextImage();
+    }
+
+    if (event.key === "ArrowLeft") {
+        previousImage();
+    }
+});
+
+
+const menuToggle = document.getElementById("menuToggle");
+const navMenu = document.getElementById("navMenu");
+
+menuToggle.setAttribute("aria-expanded", "false");
+
+menuToggle.addEventListener("click", () => {
+    const isOpen = navMenu.classList.toggle("active");
+
+    menuToggle.setAttribute("aria-expanded", isOpen);
+    menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? "Close menu" : "Open menu"
+    );
+});
+
+document.querySelectorAll("#navMenu a").forEach(link => {
+    link.addEventListener("click", () => {
+        navMenu.classList.remove("active");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open menu");
+    });
+});
+
+document.getElementById("year").textContent =
+    new Date().getFullYear();
